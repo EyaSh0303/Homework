@@ -1,8 +1,8 @@
 # Homework 1 - Open Source and Solidity fundamentals
 
-Deadline for submission: 25 January 2026, 23:59.
-Submission type: Individual
-Remarks: Try to limit the use of AI in this foundational homework. Excessive reliance on AI at this stage would limit the acquisition of coding skills for later projects that are more complex.  
+- Deadline for submission: 25 January 2026, 23:59.
+- Submission type: Individual
+- Remarks: Try to limit the use of AI in this foundational homework. Excessive reliance on AI at this stage would limit the acquisition of coding skills for later projects that are more complex.  
 
 ### Exercise 1 - Open Source Communities (2 + 1 points)
 
