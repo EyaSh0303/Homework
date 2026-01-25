@@ -12,7 +12,7 @@ The grade will be assigned as a group. In addition to fulfilling the technical c
 
 
 ### Exercise 1 - Function scoping (3 points)
-From the code provided in lecture 4, you will notice that all functions and global variables are declared as public. Update the code to the appropriate scoping (ie. private, external, internal). For each update you make, please justify why your choice is appropriate/efficient. Each correct adjustment will earn you 0,5 points. Please ensure that the final code still works as presented in class.
+From the code provided in Lecture 4, you will notice that all functions and global variables are declared as public. Update the code to the appropriate scoping (ie. private, external, internal). For each update you make, please justify why your choice is appropriate/efficient. Each correct adjustment will earn you 0,5 points. Please ensure that the final code still works as presented in class.
 
 ### Exercise 2 - Pseudo-DHT networking and smart consensus (3 + 7 points)
 This part of the homework project will focus on upgrading the network topology and consensus mechanisms to something more complex. Additionally, we will choose the proposer node randomly by requesting truly random numbers from the Chainlink VRF service.
@@ -20,11 +20,12 @@ This part of the homework project will focus on upgrading the network topology a
 ##### Part A - Network Topology (3 points)
 The provided code implements a mesh topology where every node knows about the existence of all others in the network. The goal of this part of the project is to change it to a ring topology. From Lecture 3, this change is essentially:
 
-[img]
+![netowkr](https://github.com/user-attachments/assets/e6f2988a-7a3a-4e97-9000-41813ae5c8b1)
+
 
 The following steps may help you to think through the implementation:
 1. Create a separate ``assigner.sol``. Since this contract represents a separate node from the network of validator nodes, it is not inherited.
-2. Since we are implementing a ring network, the easiest would be a unidirectional ring network, like the first round of the game in Lecture 3 and therefore, individual nodes hold only one peer, while the assigner contracts holds a the full list.
+2. Since we are implementing a ring network, the easiest would be a unidirectional ring network, like the first round of the game in Lecture 3 and therefore, individual nodes hold only one peer, while the assigner contract holds a the full list.
 3. When a node is added to the network (ie. new node contract deployed) it should register itself with the assigner.
 4. After registration and coming online, the node should request the assigner to assign it a peer. Since it is a ring network, make sure the previous node knows about the new node and the new node closes the circle so it does not form a line topology.
 
